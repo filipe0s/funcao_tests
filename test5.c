@@ -1,21 +1,20 @@
 #include <stdio.h>
-//Escreva uma função que receba o peso (quilos) e a altura (metros) de uma pessoa. Calcule e retorne o IMC (índice de massa corporal) dessa pessoa: IMC = PESO / (ALTURA²)
+//Escreva uma função para o cálculo do volume de uma esfera V = (4/3) * π * r^3 em que pi = 3.1414592
+//valor do raio r deve ser passado por parâmetro.
 
-float func(float quilos, float alt) {
-    return (quilos / (alt*alt));
-}
+        float esfera(float rai) {
+                return ((4/3) * 3.1414592 * (rai*rai*rai));
+        }
 
-int main() {
-    float peso, altura, result;
+int main () {
+    float raio, result;
 
-        printf ("Insira o peso: ");
-            scanf ("%f", &peso);
-        printf ("Insira a altura: ");
-            scanf ("%f", &altura);    
+        printf ("Raio: \n");
+            scanf ("%f", &raio);
 
-                result = func(peso, altura);
+                result = esfera(raio);
 
-                    printf ("IMC = %.2f\n", result);
+        printf ("Esfera: %.2f\n", result);        
 
     return 0;
 }
